@@ -1,0 +1,254 @@
+
+
+
+
+/* Asegura que el body y html ocupen toda la altura de la pantalla */
+html, body {
+    margin: 0;
+    padding: 0;
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    overflow-x: hidden; /* Evita un posible scroll horizontal */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body::after {
+    content: "";
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                      url("https://portalelyonyireh.edu.co/styles/assets/images/background/Fondo-Login-Yinn.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute; /* Cambiado de fixed a absolute */
+    z-index: -1;
+}
+
+
+.titulo {
+
+
+color: rgb(255, 255, 255);
+font-weight: bold; 
+
+}
+
+
+.bio {
+
+font-size: 18px;
+color: black;
+
+
+}
+
+
+strong {
+
+color: rgb(255, 109, 109);
+
+}
+
+
+h2 {
+
+
+color: #4e73df;  
+font-weight: bold;   
+
+}
+
+
+
+
+/* Opcional: Clase para el contenedor interno */
+.opcionmundial {
+    padding: 60px;
+    background-color: #fff;
+    border-radius: 25px;
+    margin: 20px auto;
+    box-shadow: 3px 0 15px #ffffff;
+}
+
+/* Etiquetas de los campos de formulario */
+label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+}
+
+input[type="text"] {
+    border: 1px solid #000000;
+}
+
+/* Campos de entrada (inputs) */
+.form-control {
+    background-color: #ffffff; /* Fondo claro */
+    border: 1px solid #000000; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px;
+    font-size: 1rem;
+    transition: border-color 0.5s ease;
+}
+
+.form-control:focus {
+    background-color: #ffffff;
+    box-shadow: 2px 0 15px #4e73df;
+}
+
+input[type="date"] {
+    border: 1px solid #000000; /* Borde negro */
+}
+
+.form-check-input {
+    border: 2px solid #000000; /* Borde negro */
+}
+
+/* Estilo para el legend dentro de fieldset */
+#linea {
+    border: 2px solid  #4e73df; /* Gris claro */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px; /* Asegura que haya espacio entre el fieldset y el siguiente elemento */
+}
+
+.usuarios2 {
+    position: relative;
+    margin: 20px 0;
+    text-align: left; 
+    font-weight: bold;
+}
+
+.usuarios2 input {
+    padding: 12px 8px;
+    font-size: 16px;
+    width: 100%; 
+    max-width: 500px; 
+    border: 1px solid #000000; 
+    border-radius: 5px;
+    transition: border-color 0.3s; 
+}
+
+.usuarios2 input::placeholder {
+    color: transparent;
+}
+
+.usuarios2 label {
+    position: absolute;
+    top: 10px; 
+    left: 12px; 
+    color: #666;
+    font-size: 16px;
+    transition: 0.3s;
+    pointer-events: none;
+    background-color: #fff;
+    padding: 0 4px;
+}
+
+/* Movimiento del label al enfocar o escribir en el input */
+.usuarios2 input:focus + label,
+.usuarios2 input:not(:placeholder-shown) + label {
+    top: -12px; /* Ajusta la altura para que el label esté justo encima del borde */
+    left: 12px; /* Asegúrate de que esté alineado con el input */
+    font-size: 14px; /* Reduce el tamaño del label al subir */
+    color: #ffffff;
+    background-color: #4e73df; 
+}
+
+.envia {
+    padding: 10px 20px; /* Espaciado interior más pequeño */
+    font-size: 18px;
+    background-color: rgb(0, 119, 0); /* Color de fondo */
+    color: rgb(255, 255, 255);
+    width: 200px;
+    border: 2px solid rgb(0, 119, 0);
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto */
+    transition: background-color 0.5s ease; /* Efecto de transición */
+    margin: 0 auto;
+    display: block;
+}
+
+.envia:hover {
+    background-color: rgb(0, 59, 0); /* Color al pasar el mouse */
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 59, 0);
+}
+
+
+
+
+
+
+
+
+
+/* Media Query para dispositivos pequeños (móviles) */
+
+
+
+@media screen and (max-width: 720px) {
+
+    
+    .opcionmundial {
+
+        padding: 15px;
+        max-width: 90%;
+      
+    }
+
+
+    .logo {
+        max-width: 200px;
+    }
+
+
+    .bg-primary {
+      
+        top: 0;
+    
+    }
+
+
+    .titulo {
+
+        font-size: 25px;
+        padding: 10px;
+       
+    }
+
+    .bio {
+
+        font-size: 13px;
+        top: 0;
+        
+        }
+
+    
+    
+
+        .usuarios2 input {
+
+            font-size: 0.9rem;
+            padding: 10px;
+
+        }
+    
+
+    .envia {
+
+        padding: 8px 20px;
+        font-size: 16px;
+        width: 50%;
+    }
+
+
+}
+
+
+
+
+
